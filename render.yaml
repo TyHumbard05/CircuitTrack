@@ -3,7 +3,6 @@ services:
     name: circuittrack
     runtime: docker
     plan: free
-    rootDir: CircuitTrack
     dockerfilePath: ./Dockerfile
     dockerContext: .
     healthCheckPath: /api/health
