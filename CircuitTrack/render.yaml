@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: circuittrack
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: AUTO_SEED
+        value: "true"
